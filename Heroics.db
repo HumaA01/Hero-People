@@ -1,0 +1,41 @@
+create Database Superheroes;
+use superheroes;
+
+CREATE TABLE Team (
+team_id int not null primary key auto_increment,
+team_name varchar(100) not null,
+objective varchar(200) not null
+);
+
+CREATE TABLE Hero (
+hero_id int not null primary key auto_increment,
+hero_name varchar(100) not null,
+alias varchar (100) not null,
+ability varchar(100) not null,
+team_id int not null,
+foreign key (team_id) References Team(team_id)
+);
+
+select * from team;
+select * from hero;
+
+INSERT INTO Team(
+team_name,
+objective)
+VALUES ('JLA', 'Protect the world'),
+('JSA', 'Defeat the Nazis'),
+('Birds of Prey', 'Fight crime (without men)'),
+('Task force X', 'Follow Waller''''s orders or die'),
+('Teen Titans','Teach young superheroes to be their best');
+
+INSERT INTO Hero(hero_name, alias, ability, team_id)
+values ('Bruce Wayne', 'Batman', 'Martial Arts', 1),
+('Clark Kent', 'Superman', 'Flight', 1),
+('Jay Garrick', 'The Flash', 'Super-Speed', 2),
+('Alan Scott', 'Green Lantern', 'Ring Creation', 2),
+('Helena Bertenelli', 'The Huntress', 'Crossbow Archery', 3),
+('Dr.Harleen Quinzel', 'Harley Quinn', 'Hammer-Fighting', 3),
+('Floyd Lawton', 'Deadshot', 'Marksmanship', 4),
+('Cecil Adams', 'Count Vertigo', 'Induce dizziness', 4),
+('Damian Wayne', 'Robin', 'Swordsmanship', 5),
+('Dick Grayson', 'Nightwing', 'Acrobatics', 5);
