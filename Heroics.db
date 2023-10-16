@@ -39,3 +39,5 @@ values ('Bruce Wayne', 'Batman', 'Martial Arts', 1),
 ('Cecil Adams', 'Count Vertigo', 'Induce dizziness', 4),
 ('Damian Wayne', 'Robin', 'Swordsmanship', 5),
 ('Dick Grayson', 'Nightwing', 'Acrobatics', 5);
+
+SELECT * FROM Hero;

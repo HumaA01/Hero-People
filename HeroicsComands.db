@@ -1,0 +1,32 @@
+USE superheroes;
+
+SELECT alias, ability 
+FROM Hero
+WHERE hero_id = 2;
+
+SELECT alias, ability 
+FROM Hero
+WHERE hero_id IN (1, 2, 3, 4, 5);
+
+SELECT alias, ability 
+FROM Hero
+WHERE hero_id = 1 OR hero_id = 2;
+
+SELECT alias, ability 
+FROM Hero
+WHERE alias LIKE 'The%';
+
+SELECT * 
+FROM Hero
+ORDER BY hero_id
+LIMIT 5; 
+
+INSERT INTO Hero(hero_name, alias, ability, team_id)
+values ('Lucas', 'Buzzlightyear99', 'Blasting lasers', 1);
+
+UPDATE Hero
+SET ability = 'Drawing underpants'
+WHERE hero_id = 8;
+
+DELETE FROM Hero
+WHERE hero_id = 10;
